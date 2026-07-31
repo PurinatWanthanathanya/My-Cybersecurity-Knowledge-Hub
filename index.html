@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
+  <!-- ปลั๊กอินสำหรับเมนูแบบเปิด-ปิดได้ -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 
   <style>
-
+    /* 1. แก้ปัญหารูปภาพในไฟล์ Markdown ไม่ให้ล้นจอ และใช้งานบนมือถือได้ */
     .markdown-section img {
       max-width: 100% !important;
       height: auto !important;
@@ -17,7 +18,8 @@
       margin: 15px auto;
       border-radius: 6px; 
     }
-    
+
+    /* 2. ย้ายปุ่ม Hamburger ไปมุมซ้ายบน */
     .sidebar-toggle {
       top: 0 !important;
       bottom: auto !important;
@@ -25,8 +27,29 @@
       padding: 12px 15px !important;
     }
 
+    /* 3. ดันช่องค้นหาลงมาหลบปุ่ม Hamburger */
     .sidebar .search {
       margin-top: 40px !important;
+    }
+
+    /* 4. ซ่อนลูกศร (> และ v) ในเมนูทั้งหมด แต่ยังคลิกเปิด-ปิดได้ปกติ */
+    .sidebar-nav li.collapse > a::before,
+    .sidebar-nav li.open > a::before,
+    .sidebar-nav li.collapse > p::before,
+    .sidebar-nav li.open > p::before,
+    .sidebar-nav li.collapse > span::before,
+    .sidebar-nav li.open > span::before {
+      display: none !important;
+    }
+
+    /* เปลี่ยนเมาส์เป็นรูปมือ (Pointer) เวลาชี้หัวข้อ จะได้รู้ว่าคลิกเปิด-ปิดได้ */
+    .sidebar-nav li.collapse > a,
+    .sidebar-nav li.open > a,
+    .sidebar-nav li.collapse > p,
+    .sidebar-nav li.open > p,
+    .sidebar-nav li.collapse > span,
+    .sidebar-nav li.open > span {
+      cursor: pointer !important;
     }
   </style>
 </head>
@@ -44,9 +67,7 @@
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       subMaxLevel: 3,
-      
       sidebarDisplayLevel: 1,
-      
       search: {
         maxAge: 86400000,
         paths: 'auto',
@@ -57,7 +78,6 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
