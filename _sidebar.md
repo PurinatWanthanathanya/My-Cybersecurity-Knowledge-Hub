@@ -22,7 +22,6 @@
   * **05 - Offensive Security Intro**
     * [Offensive Security Intro](/TryHackMe-SOC/05-Offensive-Security-Fundamentals/Offensive-Security-Intro/README.md)
 
----
 
 * **🖥️ CompTIA: Security & Network Labs**
   * **01 - Networking & Protocols**
