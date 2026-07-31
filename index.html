@@ -5,7 +5,11 @@
   <title>Central Cybersecurity Knowledge Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
   <style>
+
     .markdown-section img {
       max-width: 100% !important;
       height: auto !important;
@@ -13,12 +17,16 @@
       margin: 15px auto;
       border-radius: 6px; 
     }
-
+    
     .sidebar-toggle {
       top: 0 !important;
       bottom: auto !important;
       left: 0 !important;
-      padding: 10px 15px !important;
+      padding: 12px 15px !important;
+    }
+
+    .sidebar .search {
+      margin-top: 40px !important;
     }
   </style>
 </head>
@@ -35,7 +43,10 @@
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
-      subMaxLevel: 3,       
+      subMaxLevel: 3,
+      
+      sidebarDisplayLevel: 1,
+      
       search: {
         maxAge: 86400000,
         paths: 'auto',
@@ -46,5 +57,7 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
