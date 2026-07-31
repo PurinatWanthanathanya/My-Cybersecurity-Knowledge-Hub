@@ -32,23 +32,23 @@
       margin-top: 40px !important;
     }
 
-    /* 4. ซ่อนลูกศร (> และ v) ในเมนูทั้งหมด แต่ยังคลิกเปิด-ปิดได้ปกติ */
-    .sidebar-nav li.collapse > a::before,
-    .sidebar-nav li.open > a::before,
-    .sidebar-nav li.collapse > p::before,
-    .sidebar-nav li.open > p::before,
-    .sidebar-nav li.collapse > span::before,
-    .sidebar-nav li.open > span::before {
+    /* 4. ซ่อนลูกศรทุกประเภทเด็ดขาด ไม่ว่าจะคลุมด้วยแท็กอะไร (a, p, span, strong ฯลฯ) */
+    .sidebar .sidebar-nav li.collapse > *:before,
+    .sidebar .sidebar-nav li.collapse > *:after,
+    .sidebar .sidebar-nav li.open > *:before,
+    .sidebar .sidebar-nav li.open > *:after,
+    .sidebar .sidebar-nav li.collapse:before,
+    .sidebar .sidebar-nav li.collapse:after,
+    .sidebar .sidebar-nav li.open:before,
+    .sidebar .sidebar-nav li.open:after {
       display: none !important;
+      content: "" !important;
+      background: none !important;
     }
 
-    /* เปลี่ยนเมาส์เป็นรูปมือ (Pointer) เวลาชี้หัวข้อ จะได้รู้ว่าคลิกเปิด-ปิดได้ */
-    .sidebar-nav li.collapse > a,
-    .sidebar-nav li.open > a,
-    .sidebar-nav li.collapse > p,
-    .sidebar-nav li.open > p,
-    .sidebar-nav li.collapse > span,
-    .sidebar-nav li.open > span {
+    /* เปลี่ยนเมาส์เป็นรูปมือ (Pointer) เวลาชี้ทุกหัวข้อ จะได้รู้ว่าคลิกเปิด-ปิดได้ */
+    .sidebar .sidebar-nav li.collapse > *,
+    .sidebar .sidebar-nav li.open > * {
       cursor: pointer !important;
     }
   </style>
