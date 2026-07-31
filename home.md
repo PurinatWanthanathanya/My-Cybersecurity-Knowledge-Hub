@@ -26,5 +26,3 @@ It bridges multiple repositories together using a modular structure, allowing de
 2.  **Global Search:** Use the search bar at the top-left to query commands, tool names (e.g., *Splunk*, *Wireshark*), or specific concepts across all integrated repositories instantly.
 
 ---
-
-> *"Security is a process, not a product."* — Feel free to explore the documentation using the navigation panel on the left!
