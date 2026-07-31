@@ -18,13 +18,3 @@ It bridges multiple repositories together using a modular structure, allowing de
 *   **📡 Network & Threat Research:** Deep dives into traffic analysis (Wireshark), Threat Intelligence correlation, and phishing investigations.
 *   **🛠️ Tools & Methodologies:** Practical cheat sheets and operational workflows for defensive tools like Splunk, EDRs, and network analyzers.
 
----
-
-## 🧭 How to navigate this Hub
-
-1.  **Sidebar Navigation:** Use the toggle menu (`≡`) on the bottom-left or the sidebar on the left to browse topics categorized by specific journeys and modules.
-2.  **Global Search:** Use the search bar at the top-left to query commands, tool names (e.g., *Splunk*, *Wireshark*), or specific concepts across all integrated repositories instantly.
-
----
-
-> *"Security is a process, not a product."* — Feel free to explore the documentation using the navigation panel on the left!
