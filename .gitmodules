@@ -1,0 +1,6 @@
+[submodule "TryHackMe-SOC"]
+	path = TryHackMe-SOC
+	url = https://github.com/PurinatWanthanathanya/TryHackMe-SOC.git
+[submodule "CompTIA-Labs"]
+	path = CompTIA-Labs
+	url = https://github.com/PurinatWanthanathanya/CompTIA-Security-and-Network-Labs.git
