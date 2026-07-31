@@ -32,23 +32,19 @@
       margin-top: 40px !important;
     }
 
-    /* 4. ซ่อนลูกศรทุกประเภทเด็ดขาด ไม่ว่าจะคลุมด้วยแท็กอะไร (a, p, span, strong ฯลฯ) */
-    .sidebar .sidebar-nav li.collapse > *:before,
-    .sidebar .sidebar-nav li.collapse > *:after,
-    .sidebar .sidebar-nav li.open > *:before,
-    .sidebar .sidebar-nav li.open > *:after,
-    .sidebar .sidebar-nav li.collapse:before,
-    .sidebar .sidebar-nav li.collapse:after,
-    .sidebar .sidebar-nav li.open:before,
-    .sidebar .sidebar-nav li.open:after {
+    /* 4. ล้างลูกศรทุกสถานะ (ก่อนกด / หลังกด / เปิด / ปิด) ออกจากเมนูด้านซ้ายทั้งหมด 100% */
+    .sidebar .sidebar-nav li > *:before,
+    .sidebar .sidebar-nav li > *:after,
+    .sidebar .sidebar-nav li:before,
+    .sidebar .sidebar-nav li:after {
       display: none !important;
       content: "" !important;
       background: none !important;
+      border: none !important;
     }
 
     /* เปลี่ยนเมาส์เป็นรูปมือ (Pointer) เวลาชี้ทุกหัวข้อ จะได้รู้ว่าคลิกเปิด-ปิดได้ */
-    .sidebar .sidebar-nav li.collapse > *,
-    .sidebar .sidebar-nav li.open > * {
+    .sidebar .sidebar-nav li > * {
       cursor: pointer !important;
     }
   </style>
